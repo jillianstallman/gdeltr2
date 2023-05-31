@@ -20,7 +20,7 @@ about it, every single day.
 
 </blockquote>
 
-GDELT was founded in 1994 and it’s data commences in 1979. Over the last
+GDELT was founded in 1994 and its events data commences in 1979. Over the last
 two years the GDELT’s functionality and abilities have grown
 exponentially, for example in May 2014 GDELT processed 3,928,926 where
 as in May 2016 it processed 6,198,461. GDELT continues to evolve and
