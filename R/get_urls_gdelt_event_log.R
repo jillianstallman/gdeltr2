@@ -1,4 +1,14 @@
-#' Gets GDELT Event data, by year from 1979-2005, by year month 2006 - 2013, then by dat
+#' Collects all the URLS for the GDELT Event Data.
+#'
+#' These are by year from 1979-2005, by month from January 2006 to March 2013 (inclusive), then by day
+#' starting from 2023-04-01 to the current day.
+#'
+#' The URL can be found by clicking:
+#' https://www.gdeltproject.org/data.html#rawdatafiles
+#' then "Download GDELT 1.0 Events" to lead to
+#' http://data.gdeltproject.org/events/index.html
+#' and finally clicking "md5sums" to yield
+#' http://data.gdeltproject.org/events/md5sums
 #'
 #' @param return_message
 #'
@@ -15,9 +25,11 @@
 #' get_urls_gdelt_event_log()
 
 get_urls_gdelt_event_log <- function(return_message = T) {
+
   url <-
     'http://data.gdeltproject.org/events/md5sums'
 
+  # read the data into hash, filename (e.g. 1979.zip), get URL, database (EVENTS), and whether a ZIP file (TRUE)
   urlData <-
     url %>%
     read_tsv(col_names = F) %>%
@@ -32,6 +44,7 @@ get_urls_gdelt_event_log <- function(return_message = T) {
     suppressWarnings() %>%
     suppressMessages()
 
+  #
   urlData <-
     urlData %>%
     separate(
